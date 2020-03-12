@@ -1,0 +1,47 @@
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: bisque;
+    display: block;
+    padding: 2em;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+@supports ( (-webkit-appearance: none) or (-moz-appearance: none)) {
+    .switch {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        width: 3.5em;
+        height: 1.6em;
+        border-radius: 2em;
+        background-color: darkgreen;
+        outline: none;
+        transition: background-color .5s linear;
+
+    }
+    .switch::after {
+        content: "";
+        background-color: white;
+        display: block;
+        position: relative;
+        top: .15em;
+        left: .15em;
+        width: 1.15em;
+        height: 1.15em;
+        border: .1em solid grey;
+        border-radius: 2em;
+        transition: left .5s ease-in-out;
+    }
+    .switch:checked {
+        background-color: lightgreen;
+    }
+    .switch:checked::after {
+        left: 2em;
+
+    }
+    .groot {
+        font-size: 2em;
+    }
+}

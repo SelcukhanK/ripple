@@ -1,0 +1,41 @@
+.vlak {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.rimpel {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 600px;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    opacity: 1;
+}
+
+.groeien {
+    animation: groeien 1s ease-out;
+}
+
+@-webkit-keyframes groeien {
+    100% {
+        -webkit-transform: scale(12);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes groeien {
+    100% {
+        -webkit-transform: scale(12);
+        opacity: 0;
+    }
+}
+
+@keyframes groeien {
+    100% {
+        -webkit-transform: scale(12);
+        opacity: 0;
+    }
+}
